@@ -335,6 +335,6 @@ em {
 .cm-s-obsidian span.cm-link,
 .cm-s-obsidian span.cm-hmd-internal-link,
 .internal-link {
-    color: var(--color-primary); /* Используем ваш основной цвет */
+    color: var(--color-primary);
     text-decoration: underline;
 }
