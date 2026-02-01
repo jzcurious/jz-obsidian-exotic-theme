@@ -4,62 +4,94 @@
 
 /* --- Theme Variables --- */
 :root {
+    /* Fonts */
     --default-font: "Source Code Pro", monospace;
     --font-monospace: "Source Code Pro", monospace;
+
+    /* Visual Effects */
     --brightness: 0.4;
     --blur: 100px;
     --color-visible-border: #ffffff07;
-    --color-header: #6666fff0;
-    --color-italic: #99d542f6;
-    --color-inline-code: #ebae14;
-    --color-code-inline-bg: #4c4c4cb0;
-    --color-code-block-bg: rgba(77, 77, 77, 0.25);
-    --color-table-header-bg: #99d54277;
-    --color-table-odd-bg: rgba(77, 77, 77, 0.25);
-    --color-table-even-bg: rgba(128, 255, 255, 0.25);
-    --color-hover: black;
-    --color-handles: black;
-    --color-handles-bg: #aef93e77;
-    --color-handles-active-bg: #aef93eee;
+
+    /* Primary Color Palette */
+    --color-primary: #aef93e; /* Main accent color */
+    --color-primary-light: #aef99e; /* Lighter variant */
+    --color-primary-transparent: #aef93e11; /* Very transparent */
+    --color-primary-semi: #aef93e66; /* Semi-transparent */
+    --color-primary-strong: #aef93eee; /* Strong emphasis */
+    --color-primary-selected: #aef93e88; /* Selection state */
+
+    /* Secondary Colors */
+    --color-text: white; /* Main text */
+    --color-text-muted: #cccccc; /* Less important text */
+    --color-text-faint: #999999; /* Faint text */
+
+    /* Semantic Colors */
+    --color-italic: #99d542f6; /* Italic text */
+    --color-inline-code: #ebae14; /* Inline code */
+    --color-header: #6666fff0; /* Headers */
+
+    /* Background Colors */
+    --color-bg-base: #111111f0; /* Base background */
+    --color-bg-dim: #ffffff05; /* Dimmed backgrounds */
+    --color-bg-translucent: #ffffff11; /* Translucent backgrounds */
+    --color-bg-code-inline: #4c4c4cb0; /* Inline code background */
+    --color-bg-code-block: rgba(77, 77, 77, 0.25); /* Code block background */
+    --color-bg-table-header: #99d54277; /* Table header background */
+    --color-bg-table-odd: rgba(77, 77, 77, 0.25); /* Odd table rows */
+    --color-bg-table-even: rgba(128, 255, 255, 0.25); /* Even table rows */
+
+    /* Interactive Elements */
+    --color-hover: black; /* Hover state */
+    --color-handles: black; /* Resize handles */
+    --color-handles-bg: #aef93e77; /* Handles background */
+    --color-handles-active-bg: #aef93eee; /* Active handles */
+
+    /* UI Components */
+    --color-scrollbar-thumb: #aef93e11; /* Scrollbar thumb */
+    --color-scrollbar-active: #aef93e66; /* Active scrollbar */
+    --color-dropdown-option: #111111f0; /* Dropdown options */
+    --color-dropdown-selected: #aef93e88; /* Selected dropdown item */
 }
+
 .theme-dark {
-    /* --- Text ---*/
-    --text-normal: white;
-    --text-on-accent: white;
-    /*--text-muted: red;*/
-    /*--text-faint: red;*/
-    /*--text-selection: #aef93e77;*/
+    /* Text Colors */
+    --text-normal: var(--color-text);
+    --text-on-accent: var(--color-text);
+    --text-muted: var(--color-text-muted);
+    --text-faint: var(--color-text-faint);
+    --text-selection: var(--color-primary-transparent);
+    --link-color: var(--color-primary);
+    --icon-color-active: var(--color-text-muted);
 
-    /* --- Normal --- */
-    --interactive-normal: #aef93e11;
-    --interactive-hover: #aef93e66;
+    /* Interactive States */
+    --interactive-normal: var(--color-primary-transparent);
+    --interactive-hover: var(--color-primary-semi);
+    --interactive-accent: var(--color-primary-transparent);
+    --interactive-accent-hover: var(--color-primary-semi);
 
-    /* --- Accent --- */
-    --interactive-accent: #aef93e11;
-    --interactive-accent-hover: #aef93e66;
+    /* Scrollbars */
+    --scrollbar-thumb-bg: var(--color-scrollbar-thumb);
+    --scrollbar-active-thumb-bg: var(--color-scrollbar-active);
 
-    /* --- Scrollbars --- */
-    --scrollbar-thumb-bg: #aef93e11;
-    --scrollbar-active-thumb-bg: var(--interactive-hover);
-
-    /* --- Slider --- */
+    /* Sliders */
     --slider-track-background: var(--interactive-normal);
 
-    /* --- Background --- */
+    /* Backgrounds */
     --background-primary-alt: transparent;
     --background-primary: transparent;
     --background-secondary: transparent;
     --background-secondary-alt: transparent;
     --background-modifier-cover: #00000060;
     --background-modifier-border: transparent;
-    --background-modifier-hover: #ffffff11;
-    --setting-items-background: #ffffff05;
-    --nav-item-background-active: #aef93e11;
-    /*--tab-background-active: red;*/
-    /*--suggestion-background: red;*/
+    --background-modifier-hover: var(--color-bg-translucent);
+    --setting-items-background: var(--color-bg-dim);
+    --nav-item-background-active: var(--color-primary-transparent);
+    --tab-background-active: transparent;
+    --suggestion-background: transparent;
 
-    /*--dropdown-background: red;*/
-    /*--dropdown-background-hover: red;*/
+    --dropdown-background: transparent;
+    --dropdown-background-hover: transparent;
 }
 
 /* --- Background --- */
@@ -68,6 +100,7 @@
     background-size: cover;
     background-position: absolute;
 }
+
 .theme-dark .workspace {
     backdrop-filter: brightness(var(--brightness)) blur(var(--blur));
 }
@@ -93,7 +126,7 @@
 }
 
 .graph-controls {
-    background: #111111f0;
+    background: var(--color-bg-base);
 }
 
 /* --- Suggestion --- */
@@ -108,29 +141,32 @@ select.dropdown {
     background-color: var(--interactive-normal) !important;
     color: var(--text-normal);
 }
+
 select.dropdown:hover {
     background-color: var(--interactive-hover) !important;
     color: var(--text-normal);
 }
+
 select.dropdown option {
-    background-color: #111111f0 !important;
+    background-color: var(--color-dropdown-option) !important;
     color: var(--text-normal);
 }
+
 select.dropdown option:checked {
-    background-color: #aef93e88 !important;
-    color: white !important;
+    background-color: var(--color-dropdown-selected) !important;
     color: black !important;
 }
 
 /* --- Store Item --- */
 .community-item {
-    background-color: #ffffff05;
+    background-color: var(--color-bg-dim);
 }
 
 /* --- Switches --- */
 .checkbox-container {
     background-color: var(--interactive-normal);
 }
+
 .checkbox-container.is-enabled {
     background-color: var(--interactive-hover);
 }
@@ -138,8 +174,9 @@ select.dropdown option:checked {
 /* --- Tabs --- */
 .mod-root .workspace-tab-header.is-active {
     border-bottom: 3px solid var(--interactive-accent);
-    background-color: #aef99e11;
+    background-color: var(--color-primary-transparent);
 }
+
 .mod-root .workspace-leaf-content {
     background: #aef99e03;
     border-radius: 12px !important;
@@ -149,12 +186,15 @@ select.dropdown option:checked {
 .workspace .mod-left-split {
     border-right: 1px dotted transparent;
 }
+
 .workspace .mod-right-split {
     border-left: 1px dotted transparent;
 }
+
 .workspace .mod-left-split:hover {
     border-right: 1px dotted var(--interactive-normal);
 }
+
 .workspace .mod-right-split:hover {
     border-left: 1px dotted var(--interactive-normal);
 }
@@ -216,12 +256,14 @@ select.dropdown option:checked {
 
 /* --- Bases --- */
 .bases-thead {
-    background-color: #111111f5;
+    background-color: var(--color-bg-base);
 }
+
 .bases-tr {
     border-bottom: 1px solid var(--interactive-normal);
     border-right: 1px solid var(--interactive-normal);
 }
+
 .bases-td {
     border-left: 1px solid var(--interactive-normal);
 }
@@ -231,6 +273,7 @@ select.dropdown option:checked {
     border: 1px solid var(--interactive-normal);
     border-top-style: dotted;
 }
+
 .fc [role="gridcell"] {
     border: 1px solid var(--interactive-normal);
 }
@@ -241,20 +284,24 @@ table,
 .markdown-preview-view {
     font-family: var(--default-font);
 }
+
 .markdown-preview-view :not(pre) > code,
 .markdown-source-view.mod-cm6 .cm-inline-code {
     font-weight: bold;
     color: var(--color-inline-code);
-    background-color: var(--color-code-inline-bg);
+    background-color: var(--color-bg-code-inline);
 }
+
 .markdown-preview-view pre,
 .cm-s-obsidian div.HyperMD-codeblock {
-    background-color: var(--color-code-block-bg);
+    background-color: var(--color-bg-code-block);
 }
+
 .cm-em,
 em {
     color: var(--color-italic);
 }
+
 .markdown-preview-view h1,
 .markdown-preview-view h2,
 .markdown-preview-view h3,
@@ -264,17 +311,30 @@ em {
 .cm-header {
     color: var(--color-header);
 }
+
 .markdown-rendered thead {
-    background-color: var(--color-table-header-bg);
+    background-color: var(--color-bg-table-header);
 }
+
 .markdown-rendered table tbody > tr:nth-child(odd) {
-    background-color: var(--color-table-odd-bg);
+    background-color: var(--color-bg-table-odd);
 }
+
 .markdown-rendered table tbody > tr:nth-child(even) {
-    background-color: var(--color-table-even-bg);
+    background-color: var(--color-bg-table-even);
 }
+
 .markdown-rendered tbody tr:hover {
     transition: color 0.2s ease;
     background-color: var(--interactive-hover) !important;
     transition: background-color 0.2s ease;
+}
+
+/* --- Links --- */
+.markdown-rendered a,
+.cm-s-obsidian span.cm-link,
+.cm-s-obsidian span.cm-hmd-internal-link,
+.internal-link {
+    color: var(--color-primary); /* Используем ваш основной цвет */
+    text-decoration: underline;
 }
