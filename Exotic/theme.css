@@ -11,56 +11,61 @@
     /* Visual Effects */
     --brightness: 0.4;
     --blur: 100px;
-    --color-visible-border: #ffffff07;
+    --color-visible-border: #ffffff15;
 
     /* Primary Color Palette */
     --color-primary: #aef93e; /* Main accent color */
-    --color-primary-light: #aef99e; /* Lighter variant */
-    --color-primary-transparent: #aef93e11; /* Very transparent */
+    --color-primary-light: #c4f472; /* Lighter variant */
+    --color-primary-transparent: #aef93e15; /* Very transparent */
     --color-primary-semi: #aef93e66; /* Semi-transparent */
     --color-primary-strong: #aef93eee; /* Strong emphasis */
     --color-primary-selected: #aef93e88; /* Selection state */
 
     /* Secondary Colors */
-    --color-text: white; /* Main text */
-    --color-text-muted: #cccccc; /* Less important text */
-    --color-text-faint: #999999; /* Faint text */
+    --color-text: #f0f0f0; /* Main text */
+    --color-text-muted: #b0b0b0; /* Less important text */
+    --color-text-faint: #808080; /* Faint text */
 
     /* Semantic Colors */
-    --color-italic: #99d542f6; /* Italic text */
-    --color-inline-code: #ebae14; /* Inline code */
-    --color-header1: #6666fff0; /* Header 1 */
-    --color-header2: #6666fff0; /* Header 2 */
-    --color-header3: #6666fff0; /* Header 3 */
-    --color-header4: #6666fff0; /* Header 4 */
-    --color-header5: #6666fff0; /* Header 5 */
-    --color-header6: #6666fff0; /* Header 6 */
+    --color-italic: #c4e87a; /* Italic text */
+    --color-inline-code: #f0c040; /* Inline code */
+    --color-header1: #aef93e; /* Header 1 */
+    --color-header2: #99e035; /* Header 2 */
+    --color-header3: #84c72e; /* Header 3 */
+    --color-header4: #70ae28; /* Header 4 */
+    --color-header5: #5c9522; /* Header 5 */
+    --color-header6: #4a7c1c; /* Header 6 */
 
     /* Background Colors */
     --color-bg-base: #111111f0; /* Base background */
-    --color-bg-dim: #ffffff05; /* Dimmed backgrounds */
-    --color-bg-translucent: #ffffff11; /* Translucent backgrounds */
-    --color-bg-code-inline: #4c4c4cb0; /* Inline code background */
-    --color-bg-code-block: rgba(77, 77, 77, 0.25); /* Code block background */
-    --color-bg-table-header: #99d54277; /* Table header background */
+    --color-bg-dim: #ffffff08; /* Dimmed backgrounds */
+    --color-bg-translucent: #ffffff15; /* Translucent backgrounds */
+    --color-bg-code-inline: #3a3a3ab0; /* Inline code background */
+    --color-bg-code-block: rgba(60, 60, 60, 0.3); /* Code block background */
+    --color-bg-table-header: rgba(
+        153,
+        213,
+        66,
+        0.35
+    ); /* Table header background */
     --color-bg-table-odd: rgba(77, 77, 77, 0.25); /* Odd table rows */
-    --color-bg-table-even: rgba(128, 255, 255, 0.25); /* Even table rows */
+    --color-bg-table-even: rgba(174, 249, 62, 0.08); /* Even table rows */
 
     /* Interactive Elements */
-    --color-hover: black; /* Hover state */
-    --color-handles: black; /* Resize handles */
+    --color-hover: #1a1a1a; /* Hover state */
+    --color-handles: #1a1a1a; /* Resize handles */
     --color-handles-bg: #aef93e77; /* Handles background */
     --color-handles-active-bg: #aef93eee; /* Active handles */
 
     --color-link: var(--color-primary-light); /* Link */
     --color-link-hover: var(--color-primary-strong); /* Link hover */
-    --color-link-external: #6696f7f0; /* External link */
-    --color-link-external-hover: #aef93eee; /* External link (hover) */
+    --color-link-external: #7ecf8a; /* External link */
+    --color-link-external-hover: #aef93e; /* External link (hover) */
 
     /* UI Components */
-    --color-scrollbar-thumb: #aef93e11; /* Scrollbar thumb */
+    --color-scrollbar-thumb: #aef93e18; /* Scrollbar thumb */
     --color-scrollbar-active: #aef93e66; /* Active scrollbar */
-    --color-dropdown-option: #111111f0; /* Dropdown options */
+    --color-dropdown-option: #1a1a1af0; /* Dropdown options */
     --color-dropdown-selected: #aef93e88; /* Selected dropdown item */
 }
 
@@ -136,7 +141,7 @@
     border: 1px solid var(--color-visible-border);
 }
 
-/* --- Menu -- */
+/* --- Menu --- */
 .menu {
     backdrop-filter: brightness(var(--brightness)) blur(var(--blur));
     border: 1px solid var(--color-visible-border);
@@ -195,7 +200,7 @@ select.dropdown option:checked {
 }
 
 .mod-root .workspace-leaf-content {
-    background: #aef99e03;
+    background: rgba(174, 249, 158, 0.02);
     border-radius: 12px !important;
 }
 
@@ -340,7 +345,7 @@ em {
 }
 
 .markdown-preview-view h5,
-.cm-header-6 {
+.cm-header-5 {
     color: var(--color-header5);
 }
 
@@ -362,7 +367,6 @@ em {
 }
 
 .markdown-rendered tbody tr:hover {
-    transition: color 0.2s ease;
     background-color: var(--interactive-hover) !important;
     transition: background-color 0.2s ease;
 }
