@@ -35,8 +35,6 @@
     --color-header4: #6666fff0; /* Header 4 */
     --color-header5: #6666fff0; /* Header 5 */
     --color-header6: #6666fff0; /* Header 6 */
-    --color-link: #6666fff0; /* Link */
-    --color-link-hover: var(--color-primary-selected); /* Link hover */
 
     /* Background Colors */
     --color-bg-base: #111111f0; /* Base background */
@@ -54,6 +52,11 @@
     --color-handles-bg: #aef93e77; /* Handles background */
     --color-handles-active-bg: #aef93eee; /* Active handles */
 
+    --color-link: var(--color-primary-light); /* Link */
+    --color-link-hover: var(--color-primary-strong); /* Link hover */
+    --color-link-external: #6696f7f0; /* External link */
+    --color-link-external-hover: #aef93eee; /* External link (hover) */
+
     /* UI Components */
     --color-scrollbar-thumb: #aef93e11; /* Scrollbar thumb */
     --color-scrollbar-active: #aef93e66; /* Active scrollbar */
@@ -68,9 +71,15 @@
     --text-muted: var(--color-text-muted);
     --text-faint: var(--color-text-faint);
     --text-selection: var(--color-primary-transparent);
+    --icon-color-active: var(--color-text-muted);
+
+    /* Links */
     --link-color: var(--color-link);
     --link-color-hover: var(--color-link-hover);
-    --icon-color-active: var(--color-text-muted);
+    --link-decoration: none;
+    --link-external-color: var(--color-link-external);
+    --link-external-color-hover: var(--color-link-external-hover);
+    --link-external-decoration: none;
 
     /* Interactive States */
     --interactive-normal: var(--color-primary-transparent);
@@ -356,13 +365,4 @@ em {
     transition: color 0.2s ease;
     background-color: var(--interactive-hover) !important;
     transition: background-color 0.2s ease;
-}
-
-/* --- Links --- */
-.markdown-rendered a,
-.cm-s-obsidian span.cm-link,
-.cm-s-obsidian span.cm-hmd-internal-link,
-.internal-link {
-    color: var(--color-primary); /* Используем ваш основной цвет */
-    text-decoration: underline;
 }
