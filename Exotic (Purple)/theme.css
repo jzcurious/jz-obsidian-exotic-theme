@@ -365,3 +365,7 @@ em {
     background-color: var(--interactive-hover) !important;
     transition: background-color 0.2s ease;
 }
+
+.markdown-source-view .inline-title {
+    font-family: var(--default-font);
+}
