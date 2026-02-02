@@ -2,7 +2,7 @@
 
 A collection of minimalist themes for [Obsidian](https://obsidian.md) featuring a frosted glass effect and carefully curated color palettes.
 
-![Preview](screenshots/exotic-lime.pngs)
+![Preview](screenshots/exotic-lime.png)
 
 ## ✨ Features
 
