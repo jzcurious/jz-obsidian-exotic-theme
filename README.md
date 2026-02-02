@@ -51,8 +51,6 @@ or
 }
 ```
 
-Or use the **Custom Background** plugin for easy background management.
-
 ## ⚙️ Customization
 
 All colors are defined via CSS variables in `:root`. Key variables:
