@@ -29,7 +29,14 @@
     /* Semantic Colors */
     --color-italic: #99d542f6; /* Italic text */
     --color-inline-code: #ebae14; /* Inline code */
-    --color-header: #6666fff0; /* Headers */
+    --color-header1: #6666fff0; /* Header 1 */
+    --color-header2: #6666fff0; /* Header 2 */
+    --color-header3: #6666fff0; /* Header 3 */
+    --color-header4: #6666fff0; /* Header 4 */
+    --color-header5: #6666fff0; /* Header 5 */
+    --color-header6: #6666fff0; /* Header 6 */
+    --color-link: #6666fff0; /* Link */
+    --color-link-hover: var(--color-primary-selected); /* Link hover */
 
     /* Background Colors */
     --color-bg-base: #111111f0; /* Base background */
@@ -61,7 +68,8 @@
     --text-muted: var(--color-text-muted);
     --text-faint: var(--color-text-faint);
     --text-selection: var(--color-primary-transparent);
-    --link-color: var(--color-primary);
+    --link-color: var(--color-link);
+    --link-color-hover: var(--color-link-hover);
     --icon-color-active: var(--color-text-muted);
 
     /* Interactive States */
@@ -303,13 +311,33 @@ em {
 }
 
 .markdown-preview-view h1,
+.cm-header-1 {
+    color: var(--color-header1);
+}
+
 .markdown-preview-view h2,
+.cm-header-2 {
+    color: var(--color-header2);
+}
+
 .markdown-preview-view h3,
+.cm-header-3 {
+    color: var(--color-header3);
+}
+
 .markdown-preview-view h4,
+.cm-header-4 {
+    color: var(--color-header4);
+}
+
 .markdown-preview-view h5,
+.cm-header-6 {
+    color: var(--color-header5);
+}
+
 .markdown-preview-view h6,
-.cm-header {
-    color: var(--color-header);
+.cm-header-6 {
+    color: var(--color-header6);
 }
 
 .markdown-rendered thead {
@@ -335,6 +363,6 @@ em {
 .cm-s-obsidian span.cm-link,
 .cm-s-obsidian span.cm-hmd-internal-link,
 .internal-link {
-    color: var(--color-primary);
+    color: var(--color-primary); /* Используем ваш основной цвет */
     text-decoration: underline;
 }
