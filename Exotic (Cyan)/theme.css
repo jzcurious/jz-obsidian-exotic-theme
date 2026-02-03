@@ -365,3 +365,14 @@ em {
     background-color: var(--interactive-hover) !important;
     transition: background-color 0.2s ease;
 }
+
+/* --- TaskNotes --- */
+.fc-multimonth-daygrid.fc-daygrid {
+    background-color: transparent;
+}
+/*.advanced-calendar-view .fc-daygrid-day.fc-day-today {
+    border: 2px solid var(--interactive-accent-hover) !important;
+}
+.advanced-calendar-view .fc-daygrid-day.fc-day-today .fc-daygrid-day-number {
+    color: var(--interactive-accent-hover) !important;
+}*/

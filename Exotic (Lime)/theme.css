@@ -374,3 +374,14 @@ em {
 .markdown-source-view .inline-title {
     font-family: var(--default-font);
 }
+
+/* --- TaskNotes --- */
+.fc-multimonth-daygrid.fc-daygrid {
+    background-color: transparent;
+}
+/*.advanced-calendar-view .fc-daygrid-day.fc-day-today {
+    border: 2px solid var(--interactive-accent-hover) !important;
+}
+.advanced-calendar-view .fc-daygrid-day.fc-day-today .fc-daygrid-day-number {
+    color: var(--interactive-accent-hover) !important;
+}*/
