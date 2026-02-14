@@ -366,6 +366,10 @@ em {
     transition: background-color 0.2s ease;
 }
 
+hr {
+    background-color: var(--color-visible-border);
+}
+
 /* --- TaskNotes --- */
 .fc-multimonth-daygrid.fc-daygrid {
     background-color: transparent;
