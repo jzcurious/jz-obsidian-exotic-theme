@@ -375,6 +375,10 @@ em {
     font-family: var(--default-font);
 }
 
+hr {
+    background-color: var(--color-visible-border);
+}
+
 /* --- TaskNotes --- */
 .fc-multimonth-daygrid.fc-daygrid {
     background-color: transparent;
