@@ -374,6 +374,14 @@ hr {
     background-color: var(--color-visible-border);
 }
 
+.markdown-preview-view p {
+    text-align: justify;
+}
+
+.markdown-source-view.mod-cm6 .cm-line {
+    text-align: justify;
+}
+
 /* --- TaskNotes --- */
 .fc-multimonth-daygrid.fc-daygrid {
     background-color: transparent;
