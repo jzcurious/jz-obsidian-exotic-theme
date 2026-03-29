@@ -61,8 +61,8 @@ All colors are defined via CSS variables in `:root`. Key variables:
     --color-primary: #aef93e;
     
     /* Glass effects */
-    --brightness: 0.4;
-    --blur: 100px;
+    --brightness: 0.32;
+    --blur: 72px;
     
     /* Headers */
     --color-header1: #aef93e;
